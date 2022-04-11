@@ -8,6 +8,9 @@
   --AG: #b7b7a4;
   --AE: #a5a58d;
   --EY: #6b705c;
+  --card: rgba(0, 0, 0, 0.4);
+  --cardtwo: rgba(0, 0, 0, 0.5);
+  --cardthree: rgba(255, 255, 255, 0.4);
 }
 
 img {
@@ -28,11 +31,13 @@ body {
   align-items: center;
   /* height: 100vh; */
   margin: 0;
-  background: var(--DS);
+  /* background: var(--DS); */
+  background: url(images/bg/Outset\ Island\ day.jpg) center/ cover no-repeat fixed;
 }
 
 .container {
-  background: var(--AG);
+  
+  /* background: var(--AG); */
   /* padding: 2em; */
   width: 100%;
   min-width: 400px;
@@ -58,13 +63,18 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
+  .future {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--EY);
+  background: var(--card);
   height: 5em;
 }
 
@@ -85,6 +95,11 @@ body {
 .searchButton {
   border: none;
   background: none;
+  color: var(--EY);
+}
+
+.searchButton:hover{
+    color: var(--AB);
 }
 
 .left,
@@ -98,7 +113,7 @@ body {
 }
 
 .right {
-  background-color: var(--EY);
+  background-color: var(--card);
   border-radius: 24px;
   text-align: center;
 }
@@ -112,4 +127,51 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* future items */
+
+.future {
+  opacity: 0%;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  text-align: center;
+  background-color: var(--card);
+}
+
+.future.visible {
+    opacity: 100%;
+    transition: opacity 0.4s ease-in;
+}
+
+.tom,
+.twoDays,
+.threeDays {
+  opacity: 0%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background: var(--card);
+  justify-items: center;
+  align-items: center;
+  min-width: 250px;
+  min-height: 200px;
+  border-radius: 24px;
+  margin: 25px;
+}
+
+.tom.visible {
+  opacity: 100%;
+  transition: opacity 0.6s ease-in;
+}
+
+.twoDays.visible {
+  opacity: 100%;
+  transition: opacity 0.8s ease-in;
+}
+
+.threeDays.visible {
+  opacity: 100%;
+  transition: opacity 1s ease-in;
 }
