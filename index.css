@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --Mont: "Montserrat", serif;
+    --AB: #cb997e;
+    --DS: #ddbea9;
+    --CP: #ffe8d6;
+    --AG: #b7b7a4;
+    --AE: #a5a58d;
+    --EY: #6b705c;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--Mont);
+    box-sizing: border-box;
+    color: var(--CP);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    margin: 0;
+    background: var(--DS);
+}
+
+.container {
+    background: var(--AG);
+    /* padding: 2em; */
+    width: 100%;
+    min-width: 400px;
+    height: 100vh;
+    /* margin: 1em; */
+}
+
+.current {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    /* height: 3px; */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--EY);
+    height: 5em;
+}
+
+.form {
+    background: #fff;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.searchBar {
+    border: none;
+    width: 300px;
+    color: var(--EY);
+}
+
+.searchButton {
+    border: none;
+    background: none;
+}
+
+.left, .right {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+}
+
+.right {
+    background-color: var(--EY);
+    border-radius: 24px;
+}
+
+.temp {
+    text-align: center;
+    font-size: 100px;
+}
