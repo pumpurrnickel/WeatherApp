@@ -5,7 +5,7 @@ function searchZip() {
   let countryCode = "US";
 
   let zipOutput = fetch(
-    `http://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${appId}`
+    `https://api.openweathermap.org/geo/1.0/zip?zip=${zipCode},${countryCode}&appid=${appId}`
   )
     .then((response) => response.json())
     .then((zipJson) => {
@@ -52,7 +52,7 @@ function searchZip() {
           let windInput = Math.round(weatherJson.current.wind_speed);
           document.querySelector(".wind").innerHTML = `Wind Speed: ${windInput}mph`;
 
-          
+          document.querySelector(".current").classList.add("visible");
 
         });
     });
